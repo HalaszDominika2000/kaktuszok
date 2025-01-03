@@ -1,0 +1,66 @@
+header {
+    background-color: #00bfff;
+    text-align: center;
+    border: 2px solid rgb(96, 96, 232);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+main{
+    width: 80%;
+    margin: auto; /* Ezzel rakjuk középre az oldalt*/
+}
+ 
+h1 {
+color: white;
+}
+
+nav {
+    background-color: #0088cc;
+    text-align: center;
+    border: 2px solid rgb(96, 96, 232);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 90fr 90fr 90fr 90fr;
+    gap: 5px;
+    margin: 0px;
+}
+
+nav li {
+    text-align: center;
+}
+
+nav li a {
+    text-decoration: none;
+    color: rgb(237, 253, 8); /* Betű színét fehérre állítottuk*/
+    font-family: 'Times New Roman', Times, serif;
+}
+
+aside {
+    border: 2px solid rgb(96, 96, 232);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+article {
+    background-color: #00bfff;
+    border: 2px solid rgb(96, 96, 232);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+footer {
+    background-color: #00bfff;
+    text-align: center;
+    color: white;
+    border: 2px solid rgb(96, 96, 232);
+    border-radius: 5px;
+    padding: 5px;
+}
