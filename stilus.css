@@ -94,8 +94,9 @@ footer {
 /*rácsszerkezet*/
 main {
     display: grid;
+    gap: 10px; /* Dobozok közé tesz szünetet*/
     /* Terület neve */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
     /* Terület felosztás oszlop szerint*/
     grid-template-areas:
         "h h"

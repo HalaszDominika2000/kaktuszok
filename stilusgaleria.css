@@ -1,0 +1,79 @@
+aside {
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto auto auto; /* A képeket hármasával egymás mellé helyezzük a mintának megfelelően*/
+    gap: 10px;
+    margin: auto;
+}
+
+.kep {
+    border: 3px solid rgb(63, 63, 249);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
+
+/*rácsszerkezet*/
+main {
+    display: grid;
+    /* Terület neve */
+    grid-template-columns: 1fr 1fr;
+    /* Terület felosztás oszlop szerint*/
+    grid-template-areas:
+        "h h"
+        "n n"
+        "as as"
+        "f f";
+    /* Kinek mekkora területet adunk: Header, nav, footer teljes szélességében használja article, asside nem teljesen */
+
+}
+
+header {
+    grid-area: h;
+    /* Neveket adtunk, elneveztük */
+}
+
+nav {
+    grid-area: n;
+}
+
+aside {
+    grid-area: as;
+}
+
+footer {
+    grid-area: f;
+}
+
+/* Telefonos reszponzivitás*/
+@media only screen and (max-width: 600px) {
+
+    /* reszponzivitás beállítása, törés pontok kisebb képernyő esetén */
+    main {
+        display: grid;
+        /* Terület neve */
+        grid-template-columns: 1fr 1fr;
+        /* Terület felosztás oszlop szerint, egy részre oszlik a képernyő*/
+        grid-template-areas:
+            "h"
+            "n"
+            "as"
+            "f";
+        /* Kinek mekkora területet adunk: Header, nav, footer teljes szélességében használja article, asside nem teljesen */
+        width: 150%;
+        max-width: 1000px;
+        /* Max szélesség */
+        margin: auto;
+        /* Margónak az állítása */
+        background-color: RGB(255, 255, 230);
+        /* Háttérszín */
+
+    }
+    aside {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+}
