@@ -6,13 +6,15 @@ header {
     padding: 5px;
 }
 
-main{
+main {
     width: 80%;
-    margin: auto; /* Ezzel rakjuk középre az oldalt*/
+    margin: auto;
+    /* Ezzel rakjuk középre az oldalt*/
+    background-color: white;
 }
- 
+
 h1 {
-color: white;
+    color: white;
 }
 
 nav {
@@ -38,14 +40,18 @@ nav li {
 
 nav li a {
     text-decoration: none;
-    color: rgb(237, 253, 8); /* Betű színét fehérre állítottuk*/
+    color: rgb(237, 253, 8);
+    /* Betű színét fehérre állítottuk*/
     font-family: 'Times New Roman', Times, serif;
 }
 
 aside {
+    background-color: #00bfff;
     border: 2px solid rgb(96, 96, 232);
     border-radius: 5px;
     padding: 5px;
+    /*width: 400px;
+    height: 200px;*/
 }
 
 article {
@@ -53,6 +59,12 @@ article {
     border: 2px solid rgb(96, 96, 232);
     border-radius: 5px;
     padding: 5px;
+    /*width: 500px;
+    height: 250px;*/
+}
+
+section {
+    background-color: white;
 }
 
 
@@ -63,4 +75,81 @@ footer {
     border: 2px solid rgb(96, 96, 232);
     border-radius: 5px;
     padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*rácsszerkezet*/
+main {
+    display: grid;
+    /* Terület neve */
+    grid-template-columns: 1fr 1fr;
+    /* Terület felosztás oszlop szerint*/
+    grid-template-areas:
+        "h h"
+        "n n"
+        "as ar"
+        "f f";
+    /* Kinek mekkora területet adunk: Header, nav, footer teljes szélességében használja article, asside nem teljesen */
+
+}
+
+header {
+    grid-area: h;
+    /* Neveket adtunk, elneveztük */
+}
+
+nav {
+    grid-area: n;
+}
+
+aside {
+    grid-area: as;
+}
+
+article {
+    grid-area: ar;
+}
+
+footer {
+    grid-area: f;
+}
+
+/* Telefonos reszponzivitás*/
+@media only screen and (max-width: 600px) {
+
+    /* reszponzivitás beállítása, törés pontok kisebb képernyő esetén */
+    main {
+        display: grid;
+        /* Terület neve */
+        grid-template-columns: 1fr 1fr;
+        /* Terület felosztás oszlop szerint, egy részre oszlik a képernyő*/
+        grid-template-areas:
+            "h"
+            "n"
+            "as"
+            "ar"
+            "f";
+        /* Kinek mekkora területet adunk: Header, nav, footer teljes szélességében használja article, asside nem teljesen */
+        width: 150%;
+        max-width: 1000px;
+        /* Max szélesség */
+        margin: auto;
+        /* Margónak az állítása */
+        background-color: RGB(255, 255, 230);
+        /* Háttérszín */
+
+    }
 }
